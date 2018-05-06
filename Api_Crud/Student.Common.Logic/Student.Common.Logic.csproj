@@ -46,8 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Log\ILogger.cs" />
-    <Compile Include="Log\Log4netAdapter.cs" />
+    <Compile Include="Log4net\ILogger.cs" />
+    <Compile Include="Log4net\Log4netAdapter.cs" />
     <Compile Include="Model\Alumno.cs" />
     <Compile Include="Model\IVuelingObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
