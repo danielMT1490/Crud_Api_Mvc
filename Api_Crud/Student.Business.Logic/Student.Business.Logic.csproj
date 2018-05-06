@@ -43,14 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogic\IBusiness.cs" />
+    <Compile Include="BusinessLogic\StudentBL.cs" />
+    <Compile Include="Exceptions\BusinessException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BusinessLogic\" />
-    <Folder Include="Exceptions\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Student.Common.Logic\Student.Common.Logic.csproj">
+      <Project>{E45C46CA-0773-47A7-BDC0-0250CCEB5EFC}</Project>
+      <Name>Student.Common.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StudentDao\StudentDao.csproj">
+      <Project>{C629D0D9-18F0-430E-8319-17921C331428}</Project>
+      <Name>StudentDao</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

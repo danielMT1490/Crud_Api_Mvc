@@ -47,6 +47,7 @@
     <Compile Include="Interfaces\ICreate.cs" />
     <Compile Include="Interfaces\IDelete.cs" />
     <Compile Include="Interfaces\IRead.cs" />
+    <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Interfaces\IUpdate.cs" />
     <Compile Include="Modules\StudentDaoModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

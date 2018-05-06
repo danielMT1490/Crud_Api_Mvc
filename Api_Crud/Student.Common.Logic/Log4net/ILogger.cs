@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Student.Common.Logic.Log
 {
-    interface ILogger
+    public interface ILogger
     {
         #region Metodos
         void Debug(Object message);
