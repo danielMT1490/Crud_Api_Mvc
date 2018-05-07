@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Student.Business.Facade.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +12,8 @@ namespace Student.Business.Facade
     {
         protected void Application_Start()
         {
+            log4net.Config.XmlConfigurator.Configure();
+            AutofacConfigure.Configure();
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
     }

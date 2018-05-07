@@ -75,4 +75,4 @@ namespace Student.Common.Logic.Model
         #endregion
     }
 }
-}
+

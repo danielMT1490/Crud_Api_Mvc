@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Student.Common.Logic", "Stu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Student.Business.Logic", "Student.Business.Logic\Student.Business.Logic.csproj", "{23C6DCD9-14A8-4283-8544-095A383EF300}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutofacConfiguration", "AutofacConfiguration\AutofacConfiguration.csproj", "{C48EA3C7-528B-457C-98FE-D15AB33A5DEE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Student.Business.Facade", "Student.Business.Facade\Student.Business.Facade.csproj", "{0CBF5E00-E8B7-4190-B694-5DD649C4AB09}"
 EndProject
 Global
@@ -31,10 +29,6 @@ Global
 		{23C6DCD9-14A8-4283-8544-095A383EF300}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23C6DCD9-14A8-4283-8544-095A383EF300}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23C6DCD9-14A8-4283-8544-095A383EF300}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C48EA3C7-528B-457C-98FE-D15AB33A5DEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C48EA3C7-528B-457C-98FE-D15AB33A5DEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C48EA3C7-528B-457C-98FE-D15AB33A5DEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C48EA3C7-528B-457C-98FE-D15AB33A5DEE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0CBF5E00-E8B7-4190-B694-5DD649C4AB09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0CBF5E00-E8B7-4190-B694-5DD649C4AB09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CBF5E00-E8B7-4190-B694-5DD649C4AB09}.Release|Any CPU.ActiveCfg = Release|Any CPU
