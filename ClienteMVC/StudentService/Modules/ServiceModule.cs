@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutofacConfiguration
+namespace StudentService.Modules
 {
-    public class AutofacConfiguration
+    class ServiceModule
     {
     }
 }
