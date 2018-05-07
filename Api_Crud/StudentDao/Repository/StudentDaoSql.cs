@@ -1,4 +1,5 @@
-﻿using Student.Common.Logic.Model;
+﻿using Student.Common.Logic.Log;
+using Student.Common.Logic.Model;
 using StudentDao.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,11 @@ namespace StudentDao.Repository
 {
     public class StudentDaoSql : IRepository
     {
+        private readonly ILogger log;
+        public StudentDaoSql(ILogger log)
+        {
+            this.log = log;
+        }
         public Alumno Create(Alumno entity)
         {
             throw new NotImplementedException();

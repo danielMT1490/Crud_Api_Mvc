@@ -46,9 +46,12 @@
     <Compile Include="BusinessLogic\IBusiness.cs" />
     <Compile Include="BusinessLogic\StudentBL.cs" />
     <Compile Include="Exceptions\BusinessException.cs" />
+    <Compile Include="Modules\BusinessModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
