@@ -1,4 +1,5 @@
 ﻿using Student.Business.Facade.App_Start;
+using Student.Business.Facade.Filters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace Student.Business.Facade
     {
         protected void Application_Start()
         {
+            GlobalConfiguration.Configuration.Filters.Add(new ConnectionFilter());
             log4net.Config.XmlConfigurator.Configure();
             AutofacConfigure.Configure();
             GlobalConfiguration.Configure(WebApiConfig.Register);
