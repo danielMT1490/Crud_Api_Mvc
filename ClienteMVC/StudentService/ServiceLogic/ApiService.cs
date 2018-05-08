@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Student.Common.Logic.Logger;
 using Student.Common.Logic.Model;
 using Student.Common.Logic.Tools;
+using StudentService.ServiceLogic.Exceptions;
 
 namespace StudentService.ServiceLogic
 {
@@ -22,27 +23,93 @@ namespace StudentService.ServiceLogic
         }
         public AlumnoService Create(AlumnoService entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var response = Task.Run(() => client.PutAsJsonAsync<AlumnoService>("Alumno/Create", entity));
+                response.Result.EnsureSuccessStatusCode();
+                using (var content = response.Result.Content)
+                {
+                    return content.ReadAsAsync<AlumnoService>().GetAwaiter().GetResult();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new ServiceExceptions(ex.Message,ex.InnerException);
+            }
+          
         }
 
         public int Delete(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var response = Task.Run(() => client.DeleteAsync($"Alumno/Delete?Id={id}"));
+                response.Result.EnsureSuccessStatusCode();
+                using (var content = response.Result.Content)
+                {
+                    return content.ReadAsAsync<int>().GetAwaiter().GetResult();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new ServiceExceptions(ex.Message, ex.InnerException);
+            }
         }
 
         public List<AlumnoService> GetAll()
         {
-            throw new NotImplementedException();
+            try
+            {
+                var response = Task.Run(() => client.GetAsync($"Alumno/GetAll"));
+                response.Result.EnsureSuccessStatusCode();
+                using (var content = response.Result.Content)
+                {
+                    return content.ReadAsAsync<List<AlumnoService>>().GetAwaiter().GetResult();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new ServiceExceptions(ex.Message, ex.InnerException);
+            }
         }
 
         public AlumnoService SelectById(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var response = Task.Run(() => client.GetAsync($"Alumno/SelectById?Id={id}"));
+                response.Result.EnsureSuccessStatusCode();
+                using (var content = response.Result.Content)
+                {
+                    return content.ReadAsAsync<AlumnoService>().GetAwaiter().GetResult();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new ServiceExceptions(ex.Message, ex.InnerException);
+            }
         }
 
         public AlumnoService Update(int id, AlumnoService entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var response = Task.Run(() => client.PutAsJsonAsync<AlumnoService>($"Alumno/Delete?Id={id}",entity));
+                response.Result.EnsureSuccessStatusCode();
+                using (var content = response.Result.Content)
+                {
+                    return content.ReadAsAsync<AlumnoService>().GetAwaiter().GetResult();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new ServiceExceptions(ex.Message, ex.InnerException);
+            }
         }
     }
 }
